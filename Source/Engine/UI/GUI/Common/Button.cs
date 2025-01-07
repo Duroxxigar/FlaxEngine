@@ -76,11 +76,6 @@ namespace FlaxEngine.GUI
         /// <summary>
         /// Event fired when user clicks on the button.
         /// </summary>
-        public event Action Clicked;
-
-        /// <summary>
-        /// Event fired when user clicks on the button.
-        /// </summary>
         public event Action<Button> ButtonClicked;
 
         /// <summary>
@@ -146,7 +141,6 @@ namespace FlaxEngine.GUI
         /// </summary>
         protected virtual void OnClick()
         {
-            Clicked?.Invoke();
             ButtonClicked?.Invoke(this);
         }
 
